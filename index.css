@@ -1,0 +1,533 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Agency FB';
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 0.7fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "text text logo"
+        "text text menu"
+        "text text menu";
+}
+
+
+
+.menu {
+    grid-area: menu;
+    background-color: white;
+}
+
+.menu ul {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding-right: 0px;
+}
+
+.menu ul li {
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 1000;
+    padding: 15px;
+    padding-right: 0px;
+}
+
+.menu ul li a {
+    color: #00b6e4;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    transition: all ease 0.5s;
+    color: rgb(32, 36, 154);
+    text-decoration: underline;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    padding-top: 30px;
+    float: inline-start;
+}
+
+.text {
+    grid-area: text;
+    background-color: #00b6e4;
+    height: 100vh;
+    
+}
+
+.text h1 {
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.text p {
+    text-align: left;
+    color: white;
+    font-weight: 1000;
+    font-size: 20pt;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-top: 100px;
+}
+
+.text img {
+    float: right;
+    width: 500px;
+    height: auto;
+    position: relative;
+    top: -50px;
+}
+@media (max-width: 690px) {
+   
+    .container {
+        display: grid;
+        grid-template-columns: 0fr 1.1fr 0fr;
+        grid-template-rows: 0fr 0.5fr 0fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". logo ."
+            ". menu ."
+            "text text text";
+            
+    }
+    .menu ul li{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 0px 10px;
+        margin: 0px;
+        font-size: 30px;
+    }
+    .menu {
+        height: 100px;
+        padding-left: 0px;
+    }
+    
+    .menu ul{
+        padding-left: 0px;
+        margin-left: 40px;
+    }
+    
+    .logo img {
+        height: 100px;;
+        width: auto;
+        padding-top: 20px;
+    }
+    .text{
+        background-color: #00b6e4;
+        height: 125%;
+    }
+  
+}
+.hall {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "fame fame logo2"
+        "fame fame menu2"
+        "fame fame menu2";
+    background-color: #00b6e4;
+}
+
+.logo2 {
+    grid-area: logo2;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.logo2 img {
+    height: 100px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.menu2 {
+    grid-area: menu2;
+    background-color: white;
+    height: 100%;
+}
+
+.menu2 ul {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding-left: 50px;
+}
+
+.menu2 ul li {
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 1000;
+    padding-left: 15px;
+    padding: 0px;
+    padding-bottom: 30px;
+    padding-right: 0px;
+
+}
+
+.menu2 ul li a {
+    color: #00b6e4;
+    text-decoration: none;
+}
+
+.menu2 ul li a:hover {
+    transition: all ease 0.5s;
+    color: rgb(32, 36, 154);
+    text-decoration-line: underline;
+}
+
+.fame{
+    grid-area: fame;
+}
+.person-card {
+    background-color: #fff;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-left: 16%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+.person-card img{
+        height: 150px;
+        width: auto;
+        padding-top: 10px;
+        border-radius: 30%;
+}
+.person-card h2 {
+    font-size: 30px;
+}
+@media (max-width: 690px) {
+    .hall {
+        display: grid;
+        grid-template-columns: 0fr 1.1fr 0fr;
+        grid-template-rows: 0fr 0.2fr 0fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". logo2 ."
+            ". menu2 ."
+            "fame fame fame";
+            background-color: white;
+            height: 100%;
+    }
+    .menu2{
+        height: 100px;
+    }
+    .menu2 ul{
+        padding-left: 10%;
+    }
+    .menu2 ul li{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 0px 10px;
+        margin: 0px;
+        font-size: 30px;
+    }
+    .fame{
+        background-color: #00b6e4;
+        height: 116%
+    }
+    .person-card{
+        margin-left: 30px;
+        width: 300px;
+    }
+    .hall{
+        height: fit-content
+    }
+   
+  
+}
+.Silicon-Valley {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 0.5fr;
+    grid-template-rows: 2fr 2fr 5.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "content content logo3"
+        "content content menu3"
+        "content content menu3";
+}
+
+.logo3 {
+    grid-area: logo3;
+    background-color: white;
+}
+
+.logo3 img {
+    height: 100px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.menu3 {
+    grid-area: menu3;
+}
+
+.menu3 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+    display: inline-block;
+    margin-left: 50px;
+
+}
+
+.menu3 ul li {
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 1000;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.menu3 ul li a {
+    color: #00b6e4;
+    text-decoration: none;
+}
+
+.menu3 ul li a:hover {
+    transition: all ease 0.5s;
+    color: rgb(32, 36, 154);
+    text-decoration-line: underline;
+}
+
+.content {
+    grid-area: content;
+    background-color: #00b6e4;
+}
+
+.content h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline-item:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #00b6e4;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 0px 50px;
+}
+@media (max-width: 690px) {
+    .Silicon-Valley {
+        display: grid;
+        grid-template-columns: 0fr 1.1fr 0fr;
+        grid-template-rows: 0fr 0.3fr 0fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". logo3 ."
+            ". menu3 ."
+            "content content content";
+            background-color: white;
+            height: 100%;
+    }
+    
+   .menu3 ul{
+    margin-bottom: 60px;
+   }
+    .menu3 ul li{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 0px 10px;
+        margin: 0px;
+        font-size: 30px;
+    }
+   
+    .person-card{
+        margin-left: 30px;
+        width: 300px;
+    }
+    .content{
+        height: 121%;
+    }
+   
+  
+}
+.wortelboot {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 13fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "content2 content2 logo4"
+        "content2 content2 menu4"
+        "content2 content2 menu4";
+}
+
+.menu4 {
+    grid-area: menu4;
+}
+
+.menu4 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+    display: inline-block;
+    margin-left: 50px;
+
+}
+
+.menu4 ul li {
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 1000;
+    padding-left: 0px;
+    margin-bottom: 30px;
+    padding-right: 0px;
+
+}
+
+.menu4 ul li a {
+    color: #00b6e4;
+    text-decoration: none;
+}
+
+.menu4 ul li a:hover {
+    transition: all ease 0.5s;
+    color: rgb(32, 36, 154);
+    text-decoration-line: underline;
+}
+
+.logo4 {
+    grid-area: logo4;
+}
+
+.logo4 img {
+    height: 100px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.content2 {
+    grid-area: content2;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    height: fit-content;
+    background-color: #00b6e4;
+    color: black;
+}
+body .content2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 117%
+}
+.language {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+}
+.language img {
+    max-width: 250px;
+    max-height: auto;
+    margin-bottom: 10px;
+}
+.content2 a {
+    text-decoration: none;
+    color: #007bff;
+}
+.content2 p {
+    font-size: 16px;
+    padding: 0px 20px;
+    padding-top: 30px;
+}
+
+@media (max-width: 690px) {
+    .wortelboot {
+        display: grid;
+        grid-template-columns: 0fr 1.1fr 0fr;
+        grid-template-rows: 0fr 0.2fr 0fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". logo4 ."
+            ". menu4 ."
+            "content2 content2 content2";
+            background-color: white;
+    }
+    .menu4{
+        height: 100px;
+    }
+   
+    .menu4 ul li{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 0px 10px;
+        margin: 0px;
+        font-size: 30px;
+    }
+   
+   
+  
+}
+
